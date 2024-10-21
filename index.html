@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Adquisiciones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestión de Adquisiciones</h1>
+    <img src="img/imgAdres.png" alt="adres">
+    
+    <form id="adquisicionForm">
+      <h2>Registrar Nueva Adquisición</h2>
+      <label for="presupuesto">Presupuesto:</label>
+      <input type="text" id="presupuesto" name="presupuesto" required>
+      
+      <label for="unidad">Unidad Administrativa:</label>
+      <input type="text" id="unidad" name="unidad" required>
+      
+      <label for="tipoBien">Tipo de Bien o Servicio:</label>
+      <input type="text" id="tipoBien" name="tipoBien" required>
+      
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad" required>
+      
+      <label for="valorUnitario">Valor Unitario:</label>
+      <input type="number" id="valorUnitario" name="valorUnitario" required>
+      
+      <label for="fecha">Fecha de Adquisición:</label>
+      <input type="date" id="fecha" name="fecha" required>
+      
+      <label for="proveedor">Proveedor:</label>
+      <input type="text" id="proveedor" name="proveedor" required>
+      
+      <label for="documentacion">Documentación:</label>
+      <textarea id="documentacion" name="documentacion"></textarea>
+      
+      <button type="submit">Registrar Adquisición</button>
+    </form>
+    
+    
+    <div>
+      <h2>Consulta de Adquisiciones</h2>
+      <label for="filtro">Filtrar por unidad administrativa:</label>
+      <input type="text" id="filtro">
+      <button onclick="filtrarAdquisiciones()">Filtrar</button>
+    </div>
+    
+    
+    <table id="adquisicionesTable">
+      <thead>
+        <tr>
+          <th>Presupuesto</th>
+          <th>Unidad</th>
+          <th>Tipo</th>
+          <th>Cantidad</th>
+          <th>Valor Unitario</th>
+          <th>Valor Total</th>
+          <th>Fecha</th>
+          <th>Proveedor</th>
+          <th>Documentación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
